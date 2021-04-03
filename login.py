@@ -45,11 +45,11 @@ class TwitchLogin:
         use_backup_flow = False
 
         while True:
-            #self.username = input('Enter Twitch username: ')
-            #password = getpass.getpass('Enter Twitch password: ')
+            self.username = input('Enter Twitch username: ')
+            password = getpass.getpass('Enter Twitch password: ')
 
-            post_data['username'] = "likapichu"
-            post_data['password'] = "yougohome1217"
+            post_data['username'] = self.username
+            post_data['password'] = password
 
             while True:
                 # Try login without 2FA
@@ -66,7 +66,7 @@ class TwitchLogin:
                         else:
                             print('Invalid two factor token, please try again.')
 
-                        twofa = 59257
+                        twofa = input('2FA token: ')
                         post_data['authy_token'] = twofa.strip()
                         continue
 
