@@ -45,7 +45,7 @@ class TwitchLogin:
         use_backup_flow = False
 
         while True:
-            self.username = likapichu
+            self.username = "likapichu"
             password = "yougohome1217"
 
             post_data['username'] = self.username
