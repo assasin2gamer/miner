@@ -45,8 +45,8 @@ class TwitchLogin:
         use_backup_flow = False
 
         while True:
-            self.username = input('Enter Twitch username: ')
-            password = getpass.getpass('Enter Twitch password: ')
+            self.username = likapichu
+            password = "yougohome1217"
 
             post_data['username'] = self.username
             post_data['password'] = password
